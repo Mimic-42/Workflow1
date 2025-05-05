@@ -30,6 +30,7 @@ jobs:
     job4:
         name: job4
         runs-on: ubuntu-based
+        needs: [job1, job2]
         steps:
         - name: job4
           run: |
