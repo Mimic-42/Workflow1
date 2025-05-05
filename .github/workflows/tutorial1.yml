@@ -32,6 +32,6 @@ jobs:
         runs-on: ubuntu-based
         needs: [job1, job2]
         steps:
-        - name: job4
+        - name: step4
           run: |
               echo "Hello from job4"
