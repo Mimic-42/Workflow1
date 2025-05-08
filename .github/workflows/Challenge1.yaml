@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    name: Initial Setup
+    name: job1
     runs-on: ubuntu-latest
     steps:
       - name: setup
@@ -16,3 +16,18 @@ jobs:
           pwd
           echo "Directory Contents:"
           ls -la
+
+  job2:
+    name: Python Environment Setup and Artifact Creation
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: print python version
+        run: python --version
+
+      - name: set up pandas
+        run: pip install pandas
