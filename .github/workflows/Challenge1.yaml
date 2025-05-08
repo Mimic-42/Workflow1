@@ -18,7 +18,7 @@ jobs:
           ls -la
 
   job2:
-    name: Python Environment Setup and Artifact Creation
+    name: job2
     runs-on: ubuntu-latest
     steps:
       - name: setup python
